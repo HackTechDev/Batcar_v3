@@ -1,0 +1,55 @@
+Interface de commande en Python pour Batcar Arduino
+===================================================
+
+Distribution : Raspbian 
+
+1/ Répertoire de travail : 
+
+pi@station01:~ $ mkdir -p ARDUINO/Batcar
+pi@station01:~ $ cd ARDUINO/Batcar
+
+3) Installation des paquetages : 
+
+pi@station01:~/ARDUINO/Batcar $ sudo apt-get install python-pip python-dev
+pi@station01:~/ARDUINO/Batcar $ sudo pip install evdev
+
+
+pi@station01:~/ARDUINO/Batcar $ sudo apt-get install python-bluez
+pi@station01:~/ARDUINO/Batcar $ sudo apt-get install bluez-test-scripts
+
+
+4) Redémarrer le Raspberry Pi.
+
+
+/
+
+pi@station01:~ $ cd ARDUINO/Batcar/
+pi@station01:~/ARDUINO/Batcar $ 
+
+
+pi@station01:~/ARDUINO/Batcar $ hcitool dev
+Devices:
+	hci0	B8:27:EB:56:EA:97
+pi@station01:~/ARDUINO/Batcar $ hcitool scan
+Scanning ...
+	BC:30:7D:9C:F9:23	n/a
+	00:18:A1:12:16:C5	Batcar
+
+
+
+
+6) Lancer l'application : 
+
+- [K][Add Device...]
+- [Batcar]
+- [Pair]
+- Please enter PIN code for device 'Batcar' : 6666
+
+
+Grove Bluetooth clignote en bleu
+
+7/ 
+
+
+pi@station01:~/ARDUINO/Batcar $ python ./batcar.py 
+
