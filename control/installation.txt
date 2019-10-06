@@ -8,7 +8,7 @@ Distribution : Raspbian
 pi@station01:~ $ mkdir -p ARDUINO/Batcar
 pi@station01:~ $ cd ARDUINO/Batcar
 
-3) Installation des paquetages : 
+2/ Installation des paquetages : 
 
 pi@station01:~/ARDUINO/Batcar $ sudo apt-get install python-pip python-dev
 pi@station01:~/ARDUINO/Batcar $ sudo pip install evdev
@@ -18,10 +18,10 @@ pi@station01:~/ARDUINO/Batcar $ sudo apt-get install python-bluez
 pi@station01:~/ARDUINO/Batcar $ sudo apt-get install bluez-test-scripts
 
 
-4) Redémarrer le Raspberry Pi.
+3/ Redémarrer le Raspberry Pi.
 
 
-/
+4/ Détection Bluetooth.
 
 pi@station01:~ $ cd ARDUINO/Batcar/
 pi@station01:~/ARDUINO/Batcar $ 
@@ -36,9 +36,7 @@ Scanning ...
 	00:18:A1:12:16:C5	Batcar
 
 
-
-
-6) Lancer l'application : 
+5/ Connection Bluetooth au véhicule.
 
 - [K][Add Device...]
 - [Batcar]
@@ -48,8 +46,8 @@ Scanning ...
 
 Grove Bluetooth clignote en bleu
 
-7/ 
 
+6/ Lancement de la télécommande.
 
 pi@station01:~/ARDUINO/Batcar $ python ./batcar.py 
 
